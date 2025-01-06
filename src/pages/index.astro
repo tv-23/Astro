@@ -1,5 +1,6 @@
 ---
-
+import Navigation from "../components/Navigation.astro"
+import Social from "../components/Social.astro"
 ---
 
 <html lang="en">
@@ -11,10 +12,13 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+
+		<Navigation></Navigation>
 
 		<h1>Astro</h1>
+
+		<footer>
+			<Social></Social>
+		</footer>
 	</body>
 </html>
