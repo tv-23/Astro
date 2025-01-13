@@ -1,5 +1,5 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
 
 const pageTitle = "About Me";
 
@@ -20,7 +20,7 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
         <title>{pageTitle}</title>
     </head>
     <body>
-        <Navigation></Navigation>
+        <Header />
 
         <h1>{pageTitle}</h1>
         <h2>... and my new Astro site!</h2>
@@ -43,17 +43,21 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
                 }.
             </li>
             {
-                identity.hobbies.length >= 2 && 
+                identity.hobbies.length >= 2 && (
                     <li>
                         Two of my hobbies are: {identity.hobbies[0]} and{" "}
                         {identity.hobbies[1]}
                     </li>
-                
+                )
             }
         </ul>
         <p>My skills are:</p>
         <ul>
             {skills.map((skill) => <li>{skill}</li>)}
         </ul>
+
+        <script>
+            import "../scripts/menu.js"
+        </script>
     </body>
 </html>
